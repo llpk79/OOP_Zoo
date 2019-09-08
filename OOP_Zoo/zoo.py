@@ -1,4 +1,4 @@
-from animals import Human, Doggo, Iguana
+from .animals import Human, Doggo, Iguana
 
 
 def main():

@@ -1,5 +1,5 @@
 import unittest
-from animals import Animal, Doggo, Iguana
+from .animals import Animal, Doggo, Iguana, Human
 
 
 class TestAnimals(unittest.TestCase):
@@ -8,11 +8,13 @@ class TestAnimals(unittest.TestCase):
         self.anim = Animal('Anim', 40)
         self.dog = Doggo('Watson', 11)
         self.lizi = Iguana('Lizi', 3)
+        self.human = Human('Human', 40, 'Coding')
 
     def test_init(self):
         self.assertTrue(isinstance(self.anim, Animal))
         self.assertEqual(self.anim.name, 'Anim')
         self.assertEqual(self.anim.age, 40)
+        self.assertEqual(self.human.name, 'Human')
 
     def test_move_up(self):
         self.assertEqual(self.anim.position, 0)
@@ -26,6 +28,8 @@ class TestAnimals(unittest.TestCase):
 
     def test_speak(self):
         self.assertEqual(self.dog.speak(), f"{self.dog.name} says 'I think you're so heckin' great! Woof.'")
+        self.assertEqual(self.human.speak(), f'My name is {self.human.name}, I am {self.human.age} years old, '
+                                             f'and I like to do {self.human.hobby}.')
 
     def test_hiss(self):
         self.assertEqual(self.lizi.speak(), f'{self.lizi.name} says "Hiss."')
