@@ -1,5 +1,5 @@
+from animals import Animal, Doggo, Iguana, Human
 import unittest
-from .animals import Animal, Doggo, Iguana, Human
 
 
 class TestAnimals(unittest.TestCase):
