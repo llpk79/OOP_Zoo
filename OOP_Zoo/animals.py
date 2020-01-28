@@ -69,6 +69,9 @@ class Mammal(Animal):
 
     hair = True
 
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
     def speak(self) -> str:
         """Method intended to be overridden by child class."""
         return 'Please, give me a voice.'
@@ -87,6 +90,9 @@ class Reptile(Animal):
     """
 
     scales = True
+
+    def __init__(self, name, age):
+        super().__init__(name, age)
 
     def speak(self) -> str:
         """What a reptile would say."""
@@ -154,6 +160,9 @@ class Doggo(Mammal):
 
     genus = 'canis'
 
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
     def speak(self) -> str:
         """What any dog would say."""
         return f"{self.name} says 'I think you're so heckin' great! Woof.'"
@@ -177,6 +186,9 @@ class Iguana(Reptile):
     """
 
     genus = 'iguana'
+
+    def __init__(self, name, age):
+        super().__init__(name, age)
 
     def hide(self) -> str:
         """What an iguana do."""
